@@ -120,3 +120,33 @@
     * … so is the application’s icon
     
 # Declaring Permissions
+
+## Declaring Permissions - 1 - Attributes
+
+* Can be done using the <permission> element
+    * android:label: Permission’s name, will be displayed to user
+    * android:description: Descriptive text, will be displayed to user
+    * android:permissionGroup: May be used to group multiple permissions
+    * android:protectionLevel: Tells the system how the user is informed about the permission and who can utilize the permission
+    
+## Declaring Permissions - 1 - Protection Level
+
+* android:protectionLevel can have the following values:
+    * normal: Low risk, user will not explicitly asked for approval, isolated application level feature access
+    * dangerous: Higher risk, i.e. access to private user data, user has to approve explicitly
+    * signature: Automatically grants the permission to applications signed with the same certificate, does not require user approval
+    * signatureOrSystem: Automatically grants the permission to system applications and applications that have been signed with the same certificate
+    * system: Flag for system applications
+    * Development: Flag for development applications
+    
+## Declaring Permissions - 3 - URI Permissions - ContentProvider
+
+* Since ContentProvider may offer a variety of ways to access and manipula te data, it may not be sufficient to use a single permission
+* This is where URI permissions come into play, add this attribute to your ContentProvider definition
+    * android:grantUriPermissions (boolean)
+* If you fire an Intent, you may set the Intent. FLAG_GRANT_READ_URI_PERMISSION or Intent.FLAG_GRANT_WRITE_URI_PERMISSION
+* Setting these flags will grant read/write access to the URI contained in the Intent’s data and ClipData
+
+# Any Questions?
+
+
