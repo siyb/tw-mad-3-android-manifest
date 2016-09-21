@@ -1,4 +1,4 @@
-% MAD - Android 1: Activities & Fragments
+% MAD - Android 3: The Android Manifest
 % Patrick Sturm
 % 21.09.2016
 
