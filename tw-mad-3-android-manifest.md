@@ -1,6 +1,6 @@
 % MAD - Android 3: The Android Manifest
 % Patrick Sturm
-% 22.03.2017
+% 16.10.2017
 
 ## Information
 
